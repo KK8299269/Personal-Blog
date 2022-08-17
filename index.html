@@ -1,62 +1,130 @@
 <!DOCTYPE html>
-<html >
-<head>
+<html>
+  <head>
+<meta meta name="viewport" content="width=device-width, user-scalable=no" />
    
-    <title>Document</title>
-    <style>
-        body{
-             font-family: arial;
-            background: #001e4a;
-            color: white;
-            text-align: center;
-        }
-        .welcome{
-            color: #56f921;
-            font-size: 27px;
-            font-weight: 
-        }
-        .top span{
-            color: yellow;
-        }
-        .info{
-            border: 2px solid red;
-            padding: 20px;
-            margin: 10px;
-        }
-        b{
-            color: red;
-            font-size: 20px
-        }
-        img{
-            width: 100%;
-        }
-    </style>
-</head>
-<body>
-    <center>
-       <h1 class="welcome">Welcome To My website</h1>
-       <h3 class="top">I am <span>"Imros Arefen"</span></h3>
-        <img src="PicsArt_01-06-10-removebg-preview%20(1).png">
-        <h1>About myself</h1>
-        <hr>
-        <p>Hello, My name is imros.I am a web developer.Sodales iaculis est Scelerisque sociis magna dolor pulvinar magnis. Varius praesent suscipit. Donec morbi feugiat placerat gravida porttitor natoque nonummy parturient posuere. Magnis suspendisse parturient. Magna ultricies nostra nunc magna. Sodales etiam arcu suscipit, mollis. Aenean</p>
-        <br>
-        <br>
-        <div class="info">
-        <h1>CONTACT US</h1>
-     <b>Name:</b> Imros Arefen <br>
-     <b>Email:</b> imros@gmail.com
-     <br><br>
-     <b>Phone:   </b>01782432507 <br>
-     <b>Date of Birth: </b>  24 December 2000
-     <br>
-     <br>
-     
-       <b>School:</b> Khepupara Model High secool |
-     <b>Collage:</b> Mojaher Uddin Govt College
+    <title></title>
+    
+    <link rel="stylesheet" href="/index.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ <title>Khaled Nur Emon</title>
+  
+  
+  </head>
+  <body>
+    
+    <h1 class="name">Khaled Nur Emon</h1>
+   
+   <img id="blog_png" src="blog1.png">
+  <h2 id="welcome">Welcome To My Personal Blog</h2> 
+ 
+    <div class="introduction">
+   
+   <h2 id="h_intro">Short Intro</h2>
+        <br>   <br>
+    <p>Name: Khaled Nur Emon<br>
+Father's Name: Md. Noor Uddin<br>
+Mother's Name: Mst. Ruksana begum <br>
+Date of Birth: 29/10/2005<br>
+Village: Kharikhapunzi<br>
+Union: Dorbast <br>
+Upazila: Jaintapur<br>
+Zila: Sylhet <br>
+Age: 18 years
+
+</p>
     </div>
-    <br>
-    <br>
-    </center>
-</body>
+    
+   
+  <div class="skill"> 
+  <h2 id="pic_title">My Skills</h2>
+  <img class="skill_img" src="writer.png">
+  <!--Cracker911181-->
+  <p class="skill_p">I am a small writer. I have already written some poems and stories. I spend my free time by writing poems.</p>
+  
+    <img class="skill_img" src="graphic_deaigner.png">
+  <p style="margin-top:-30px;" class="skill_p">I am also a Graphic Designer. This is one of my favorite jobs.</p>
+  
+    <img class="skill_img" src="freelencer.png">
+  <p style="margin-top:-30px;" class="skill_p">I am a Freelencer too. Freelencing is the most popular job in digital marketing. From this I get my expenses. </p>
+  </div>
+    
+    
+    
+    
+    
+<h2 id="pic_title">My Pictures</h2>
+<span id="back_pic" onclick="back()">❮</span><img class="picture" id="my_picture" src="my1.png"><span id="forward_pic" onclick="forward()">❯</span>
+
+<p class="dots"><span style="background-color: #777;" id="dot1" class="dot"></span><span id="dot2"  class="dot"></span><span id="dot3" class="dot"></span><span id="dot4"  class="dot"></span></p>
+
+
+
+<div class="copyright"><p>Copyright © 2022 Khaled Nur Emon | All Right Resarved<br>Developed By  <a style="color:#777;text-decoration-line:none;" href="https://naimulislam.cf">Naimul Islam Manna</a></p></div>
+
+
+<p id="hide">1</p>
+  </body>
+  
+ 
+ 
+ 
+ 
+ 
+  
+  <script>
+    function forward(){
+      var back1 = document.getElementById("hide").innerHTML;
+      
+      back1 = parseInt(back1);
+      if(back1==4){
+        document.getElementById("hide").innerHTML=1;
+        document.getElementById("my_picture").src="my1.png";
+     document.getElementById("dot4").style="background-color: #bbb;";
+     document.getElementById("dot1").style="background-color: #777;";
+     
+      } else if(back1<5 && back1>0){
+        var back=back1+1;
+     
+     // alert("my"+back+".png");
+    
+      document.getElementById("my_picture").src="my"+back+".png";
+      document.getElementById("hide").innerHTML=back;
+      
+      document.getElementById("dot"+back1).style="background-color: #bbb;";
+      //cracker911181 coded
+     document.getElementById("dot"+back).style="background-color: #777;";
+      }
+      
+    }
+    
+    
+    
+    
+    function back(){
+      var back1 = document.getElementById("hide").innerHTML;
+      
+      back1 = parseInt(back1);
+      if(back1==1){
+        document.getElementById("hide").innerHTML=4;
+        document.getElementById("my_picture").src="my4.png";
+    
+     document.getElementById("dot1").style="background-color: #bbb;";
+     document.getElementById("dot4").style="background-color: #777;";
+     
+      } else if(back1>0 && back1<5){
+        var back=back1-1;
+     
+     // alert("my"+back+".png");
+    
+      document.getElementById("my_picture").src="my"+back+".png";
+      document.getElementById("hide").innerHTML=back;
+      
+      document.getElementById("dot"+back1).style="background-color: #bbb;";
+     document.getElementById("dot"+back).style="background-color: #777;";
+      }
+      
+    }
+  </script>
 </html>
